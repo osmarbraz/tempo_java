@@ -1,7 +1,7 @@
 /**
  * b)
  */
-package model;
+package modelo;
 
 import java.util.Scanner;
 

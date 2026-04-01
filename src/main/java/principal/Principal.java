@@ -4,7 +4,7 @@
 package principal;
 
 import java.util.Scanner;
-import model.Tempo;
+import modelo.Tempo;
 
 /**
  * o)
