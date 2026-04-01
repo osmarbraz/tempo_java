@@ -1,11 +1,21 @@
+/**
+ * b)
+ */
 package principal;
 
 import java.util.Scanner;
 import model.Tempo;
 
+/**
+ * o)
+ */
 public class Principal {
 
+    /**
+     * r)
+     */
     public static void main(String args[]) {
+
         Tempo tempo = new Tempo();
         int op = -2;
         Scanner in = new Scanner(System.in);
@@ -68,6 +78,7 @@ public class Principal {
                     break;
                 }
                 case 99:
+                    System.out.println("Saindo do programa.");
                     break;
                 default:
                     op = -2;

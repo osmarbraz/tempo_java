@@ -1,13 +1,22 @@
+/**
+ * b)
+ */
 package model;
 
 import java.util.Scanner;
 
 public class Tempo {
 
+    /**
+     * a)
+     */
     private int hora;
     private int minuto;
     private int segundo;
 
+    /**
+     * d)
+     */
     //Construtor sem parâmetros
     public Tempo() {
         this(0, 0, 0);
@@ -29,6 +38,9 @@ public class Tempo {
         System.out.println("Tempo: " + hora + ":" + minuto + ":" + segundo);
     }
 
+    /**
+     * c)
+     */
     //sets
     public void setHora(int hora) {
         this.hora = validaDado(hora, 'h');
@@ -67,6 +79,9 @@ public class Tempo {
         return segundo;
     }
 
+    /**
+     * f)
+     */
     //valida entradas com strings
     public int validaDado(String _dado, char tipo) {
         if (!_dado.equals("")) {
@@ -78,6 +93,9 @@ public class Tempo {
         }
     }
 
+    /**
+     * f)
+     */
     //valida dados com inteiros
     public int validaDado(int dado, char tipo) {
         if ((tipo == 'h' && (dado < 0 || dado > 23))
@@ -88,6 +106,9 @@ public class Tempo {
         return dado;
     }
 
+    /**
+     * g)
+     */
     //pede valores e preenche o objeto
     public void preencher() {
         Scanner in = new Scanner(System.in);
@@ -99,12 +120,18 @@ public class Tempo {
         setSegundo(in.nextInt());
     }
 
+    /**
+     * h)
+     */
     //imprime valores na tela
     public void imprimir() {
         System.out.println("Hora atual:" + horaAtual());
     }
 
     //incrementos
+    /**
+     * k)
+     */
     public void incrementaHora() {
         int hora = getHora() + 1;
         if (hora > 23) {
@@ -113,6 +140,9 @@ public class Tempo {
         setHora(hora);
     }
 
+    /**
+     * j)
+     */
     public void incrementaMinuto() {
         int min = getMinuto() + 1;
         if (min > 59) {
@@ -122,6 +152,9 @@ public class Tempo {
         setMinuto(min);
     }
 
+    /**
+     * i)
+     */
     public void incrementaSegundo() {
         int seg = getSegundo() + 1;
         if (seg > 59) {
@@ -132,6 +165,9 @@ public class Tempo {
     }
 
     //decrementos
+    /**
+     * n)
+     */
     public void decrementaHora() {
         int hora = getHora() - 1;
         if (hora < 0) {
@@ -140,6 +176,9 @@ public class Tempo {
         setHora(hora);
     }
 
+    /**
+     * m)
+     */
     public void decrementaMinuto() {
         int min = getMinuto() - 1;
         if (min < 0) {
@@ -149,6 +188,9 @@ public class Tempo {
         setMinuto(min);
     }
 
+    /**
+     * l)
+     */
     public void decrementaSegundo() {
         int seg = getSegundo() - 1;
         if (seg < 0) {
@@ -158,6 +200,9 @@ public class Tempo {
         setSegundo(seg);
     }
 
+    /**
+     * o)
+     */
     //retorna um string do tipo hh:mm:ss
     public String horaAtual() {
         String saida = "";
@@ -179,6 +224,9 @@ public class Tempo {
         return saida;
     }
 
+    /**
+     * p)
+     */
     //retorna um obj da classe Tempo com a soma de t1 e t2
     public Tempo adicionaTempos(Tempo t1, Tempo t2) {
         int hora = 0, minuto = 0, segundo = 0;
@@ -203,6 +251,9 @@ public class Tempo {
         return t;
     }
 
+    /**
+     * q)
+     */
     //retorna quantos segundos entre t1 e t2
     public int segundosEntre(Tempo t1, Tempo t2) {
         int segundosT1 = t1.getHora() * 3600 + t1.getMinuto() * 60 + t1.getSegundo();
