@@ -31,8 +31,8 @@ public class Principal {
                     + "8  - Mostrar Hora\n"
                     + "9  - Adicionar 2 Tempos\n"
                     + "10 - Segundos entre Tempos\n"
-                    + "99 - Sair"
-                    + "\nOpção:");
+                    + "99 - Sair\n"
+                    + "Digite uma opção:");
             op = in.nextInt();
             switch (op) {
                 case 1:
@@ -81,7 +81,8 @@ public class Principal {
                     System.out.println("Saindo do programa.");
                     break;
                 default:
-                    op = -2;
+                    System.out.println("Opção invalida.");
+                    op = -1;
                     break;
             }
         }
