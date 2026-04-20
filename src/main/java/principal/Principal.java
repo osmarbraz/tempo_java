@@ -17,9 +17,9 @@ public class Principal {
     public static void main(String args[]) {
 
         Tempo tempo = new Tempo();
-        int op = -2;
+        int op = -1;
         Scanner in = new Scanner(System.in);
-        while (op != 99) {
+        do {
             System.out.println(
                     "\n1  - Mudar Horario\n"
                     + "2  - Incrementar segundo\n"
@@ -85,6 +85,6 @@ public class Principal {
                     op = -1;
                     break;
             }
-        }
+        }while (op != 99);
     }
 }
